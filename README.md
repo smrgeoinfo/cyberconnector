@@ -1,11 +1,27 @@
 
-[![Build Status](https://travis-ci.org/CSISS/cc.svg?branch=master)](https://travis-ci.org/CSISS/cc) [![License](https://img.shields.io/github/license/CSISS/cc.svg)](https://github.com/CSISS/cc/blob/master/LICENSE) [![Stars](https://img.shields.io/github/stars/CSISS/cc.svg)](https://github.com/CSISS/cc/stargazers) [![Forks](https://img.shields.io/github/forks/CSISS/cc.svg)](https://github.com/CSISS/cc/network/members) [![Issues](https://img.shields.io/github/issues/CSISS/cc.svg)](https://github.com/CSISS/cc/issues) [![Coverage](https://img.shields.io/badge/covarege-100%25-success.svg)](https://codecov.io/) 
+[![Build Status](https://travis-ci.org/CSISS/cc.svg?branch=master)](https://travis-ci.org/CSISS/cc) [![License](https://img.shields.io/github/license/CSISS/cc.svg)](https://github.com/CSISS/cc/blob/master/LICENSE)  [![Coverage](https://img.shields.io/badge/covarege-100%25-success.svg)](https://codecov.io/) 
 
 # CyberConnector
 
-NSF EarthCube Building Block project
+This repository contains code to build the COVALI application. This is a JAVA application that runs on a server Tomcat container, and supports web clients to display side by side views of the same geographic area with superimposed, geographically registered data.  The principal use case is comparison of data from different sources, particularly for comparing results of different models. Data can be added dynamically to either of the side by side views. The two view extents are geographically synced to display the same area on both sides whenever the view is panned, zoomed, or rotated. 
 
-This project aims to connect the existing data sources to the Earth science models so the generation of modeling products could be more automatic and effortless. 
+The viewer can display data from various sources:
+- GRIB/NetCDF files locally accessible from the server
+- Uploaded NetCDF, GRIB or GeoJSON files
+- ncWMS services on the web
+- Online (URL) accessible NetCDF, GRIB or GeoJSON files
+- A CHORDS server accessible via URL
+- IRIS seismology stations
+
+
+Other functions include:
+- Create an animation from multiple data time steps
+- Get statistics for values at points or along a section line
+- Regridding NetCDF data is supported, but requires additional software installation
+- Supports some NetCDF operators for selected variables; operators include average, add, subtract, multiply, divide, and scriptable arithmetic operations.
+- Supports ncdump operation to get description of file content
+
+An NSF EarthCube Building Block project
 
 [CyberConnector Online Documentation](https://csiss.github.io/cc/)
 
@@ -27,7 +43,7 @@ Apache Maven 3.5.0+ (optional, building CyberConnector.war from source)
 
 ### Automated Installer
 
-CyberConnector installer support CentOS, Ubuntu/Debian and Mac OS X operating systems. To get started download the latest source code. The installer script requires two parameters: the Anaconda directory and the data directory paths. 
+The CyberConnector installer in this release supports CentOS, Ubuntu/Debian and Mac OS X operating systems. To get started download the latest source code. The installer script requires two parameters: the Anaconda directory and the data directory paths. 
 
 
 Example usage: 
